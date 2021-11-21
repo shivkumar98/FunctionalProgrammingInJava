@@ -29,6 +29,13 @@ public class Exercises {
 		.forEach(System.out::println);
 		
 	}
+	
+	private static void printStringLengthOfEachCourse(List<String> courses) {
+		courses.stream()
+		.map(e -> e.length())
+		.forEach(System.out::println);
+	}
+
 
 	
 	public static void main(String[] args) {
@@ -46,11 +53,10 @@ public class Exercises {
 		
 		// Ex 4 print courses with atleast 4 letters
 		printEachCourseWithAtLeast4(courses);
+		
+		//Ex 6 print the number of characters of each course
+		printStringLengthOfEachCourse(courses);
 	}
 
-
-	
-
-	
 	
 }
