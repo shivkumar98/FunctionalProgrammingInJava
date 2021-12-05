@@ -2,6 +2,7 @@ package chapter4;
 
 import java.util.List;
 import java.util.Random;
+import java.util.function.BiPredicate;
 import java.util.function.BinaryOperator;
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -33,7 +34,17 @@ public class FP03FunctionalInterfaces {
 		//unary operator takes one input and returns the same type as output;
 		UnaryOperator<Integer> timesThree = x->3*x;
 		
-		System.out.println(timesThree.apply(3));
+		/*
+		 * BiPredicate takes two inputs and returns a boolean
+		 */
+		
+		BiPredicate<Integer, String> biPred = (x,y) -> {
+			return Integer.parseInt(y)==x;
+		};
+		
+		System.out.println(biPred.test(2, "2"));
+		
+		
 		
 	}
 	
