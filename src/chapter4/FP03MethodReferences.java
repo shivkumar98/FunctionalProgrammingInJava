@@ -1,6 +1,7 @@
 package chapter4;
 
 import java.util.List;
+import java.util.function.Supplier;
 
 public class FP03MethodReferences {
 	
@@ -19,6 +20,8 @@ public class FP03MethodReferences {
 				//.map(str -> str.toUpperCase())
 				.map(String::toUpperCase)
 				.forEach(FP03MethodReferences::print);
+			
+			Supplier<String> supplier = String::new;
 		}
 			
 	
